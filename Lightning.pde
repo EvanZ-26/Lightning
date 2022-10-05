@@ -22,14 +22,15 @@ void draw() {
     startY = endY;
   }
 }
-void keyPressed() { //LIGHTNINGGGGG
-  startX = 0;
-  startY = 150;
-  endX = 0;
-  endY = 150;
-  
-}
 
-void mousePressed() { //resets the canvas
-clear();
+void keyPressed() {
+  if (key == 'c') {
+    clear();
+  }
+  if (key != 'c') {
+    startX = 0;
+    startY = 150;
+    endX = 0;
+    endY = 150;
+  }
 }
