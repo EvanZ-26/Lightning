@@ -27,7 +27,7 @@ void keyPressed() {
   if (key == 'c') {
     clear();
   }
-  if (key != 'c') {
+  if (key == ' ') {
     startX = 0;
     startY = 150;
     endX = 0;
