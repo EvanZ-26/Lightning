@@ -1,11 +1,11 @@
 int startX = 0;
-int startY = 150;
+int startY = 200;
 int endX = 0;
-int endY = 150;
+int endY = 200;
 
 void setup() {
-  size(400, 400);
-  background(1,1,1);
+  size(400 , 400);
+  background(1, 1, 1);
   strokeWeight(5);
 }
 void draw() {
@@ -14,10 +14,10 @@ void draw() {
   int B = (int)(Math.random()*256);
   stroke(R, G, B);
 
-  while (endX < width) {
+  while (endY < height) {
     endX = startX + (int)(Math.random()*10);
     endY = startY + (int)(Math.random()*18-9);
-    line(startX, startY, endX, endY);
+    line(startY, startX, endY, endX);
     startX = endX;
     startY = endY;
   }
@@ -29,8 +29,8 @@ void keyPressed() {
   }
   if (key == ' ') {
     startX = 0;
-    startY = 150;
+    startY = 200;
     endX = 0;
-    endY = 150;
+    endY = 200;
   }
 }
